@@ -26,6 +26,7 @@ class Player(models.Model):
     position = models.ManyToManyField(Positions)
     age = models.IntegerField()
     free_agent = models.BooleanField(default=False)
+    rating = models.IntegerField()
     team = models.ForeignKey(Team, on_delete=models.SET_NULL, blank=True, null=True)
     worth = models.IntegerField()
 
